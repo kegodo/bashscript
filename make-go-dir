@@ -26,3 +26,16 @@ go mod init "$idName"
 touch "Makefile"
 mkdir "bin"
 mkdir "cmd"
+    cd "cmd"
+        mkdir "api"
+            cd "api"
+                touch "main.go"
+echo "
+//File: cmd/api/main.go                
+package main
+                
+import \"fmt\"
+                
+func main() {
+fmt.Println(\"Hello world!\")
+} " > main.go
