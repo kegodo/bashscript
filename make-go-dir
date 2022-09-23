@@ -7,5 +7,13 @@ if [[ -z "$idName" ]]
     else
         echo -e "\nI am about to create a directory structure named *$rtName*"
         echo "Do you want to continue? [Yes\No]"
-        read ans
+        ans="${ans,,}"     
+fi
+
+if [[ "$ans" == "yes" ]]
+    then
+        echo "Create directory structure.."
+    else
+        echo "Abort."
+        exit 0
 fi
