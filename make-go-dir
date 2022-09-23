@@ -41,3 +41,6 @@ import \"fmt\"
 func main() {
 fmt.Println(\"Hello world!\")
 } " > main.go
+
+echo -e "
+I have created a *main.go* file for you to test the directory structure.\nType *go run ./cmd/api* at the root directory of your project to test your project.\nThank you."
