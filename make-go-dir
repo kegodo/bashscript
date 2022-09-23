@@ -17,3 +17,12 @@ if [[ "$ans" == "yes" ]]
         echo "Abort."
         exit 0
 fi
+mkdir "$rtName"
+cd "$rtName"
+mkdir "internals"
+mkdir "migrations"
+mkdir "remote"
+go mod init "$idName"
+touch "Makefile"
+mkdir "bin"
+mkdir "cmd"
