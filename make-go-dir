@@ -1,0 +1,11 @@
+#!/bin/bash
+rtName="$1"
+idName="$2" 
+if [[ -z "$idName" ]]
+    then
+        echo -e "\nYou need to provide two arguments for this script to work. \nUsage: make-go-dir <root directory name> <identifier name>\n" 
+    else
+        echo -e "\nI am about to create a directory structure named *$rtName*"
+        echo "Do you want to continue? [Yes\No]"
+        read ans
+fi
