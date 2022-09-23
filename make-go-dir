@@ -1,12 +1,14 @@
 #!/bin/bash
 rtName="$1"
-idName="$2" 
+idName="$2"
+id="$rtName.$idName"
 if [[ -z "$idName" ]]
     then
         echo -e "\nYou need to provide two arguments for this script to work. \nUsage: make-go-dir <root directory name> <identifier name>\n" 
     else
         echo -e "\nI am about to create a directory structure named *$rtName*"
         echo "Do you want to continue? [Yes\No]"
+        read ans
         ans="${ans,,}"     
 fi
 
@@ -22,7 +24,7 @@ cd "$rtName"
 mkdir "internals"
 mkdir "migrations"
 mkdir "remote"
-go mod init "$idName"
+go mod init "$id"
 touch "Makefile"
 mkdir "bin"
 mkdir "cmd"
